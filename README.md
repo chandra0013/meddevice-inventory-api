@@ -1,10 +1,10 @@
 # meddevice-inventory-api
 
-RESTful medical device inventory API built with Go, PostgreSQL, Docker, and GitHub Actions CI.
+RESTful medical device inventory API built with Go, PostgreSQL, Docker, and a GitHub Actions CI template.
 
 ## Why this project exists
 
-Medical device teams need a reliable way to track device status, location, and lifecycle state across clinical environments. This API provides a small production-style backend for device inventory operations with clear REST endpoints, API-key authentication, PostgreSQL persistence, containerized local development, and CI coverage.
+Medical device teams need a reliable way to track device status, location, and lifecycle state across clinical environments. This API provides a small production-style backend for device inventory operations with clear REST endpoints, API-key authentication, PostgreSQL persistence, containerized local development, and a ready-to-enable CI template.
 
 ## Architecture
 
@@ -24,7 +24,7 @@ PostgreSQL
 - Go 1.22
 - PostgreSQL
 - Docker and Docker Compose
-- GitHub Actions CI
+- GitHub Actions CI template
 - Standard library HTTP router
 
 ## Endpoints
@@ -89,14 +89,17 @@ curl -X POST http://localhost:8080/devices \
 
 ```bash
 go mod download
-go test ./...
 go build ./cmd/api
 ```
+
+## CI template
+
+The repository includes `github-actions-ci.yml` as a ready-to-enable GitHub Actions workflow. Move it to `.github/workflows/ci.yml` when the repository token or UI session has workflow-file permission.
 
 ## Repository description
 
 Use this GitHub description:
 
 ```text
-RESTful medical device inventory API - Go, PostgreSQL, Docker, CI/CD pipeline
+RESTful medical device inventory API - Go, PostgreSQL, Docker-ready backend, CI template
 ```
